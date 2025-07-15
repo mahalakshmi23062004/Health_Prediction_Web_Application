@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Health Prediction</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-dark: #1e3c72;
+            --primary-light: #2a5298;
+            --accent: #ff7e5f;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f9ff 0%, #e6f0ff 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(30, 60, 114, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+        
+        .gradient-heading {
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .gradient-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #feb47b);
+            border-radius: 3px;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--accent), #feb47b);
+            border: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 126, 95, 0.3);
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 126, 95, 0.4);
+            color: white;
+        }
+        
+        .link-btn {
+            color: var(--primary-dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .link-btn:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .result-message {
+            background: linear-gradient(135deg, #e3fdf5, #cbf0e8);
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            border-left: 4px solid #10b981;
+            font-weight: 600;
+        }
+        
+        .form-control, .form-select {
+            border: 1px solid rgba(30, 60, 114, 0.2);
+            border-radius: 10px;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 0.25rem rgba(255, 126, 95, 0.25);
+        }
+        
+        .input-group-horizontal {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .input-group-horizontal > div {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .input-group-horizontal {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center py-4">
+
+    {% block body %}{% endblock %}
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

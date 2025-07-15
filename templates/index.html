@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+
+
+  <!-- Colorful Gradient Header -->
+ 
+  <div class="container py-5">
+ <h2 class="text-center mb-5 fw-bold text-gradient" style="font-size: 3rem;">
+    🩺 Health Prediction Dashboard
+  </h2>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+    <!-- Card 1 -->
+    <div class="col">
+      <div class="card h-100 text-white border-0 shadow" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+        <div class="card-body text-center">
+          <h5 class="card-title">🔥 Calories Burned</h5>
+          <p class="card-text">Estimate calories burned based on your activity.</p>
+          <a href="/calories" class="btn btn-light shadow rounded-pill px-4">Predict</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col">
+      <div class="card h-100 text-white border-0 shadow" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
+        <div class="card-body text-center">
+          <h5 class="card-title">🫀 Health Risk</h5>
+          <p class="card-text">Evaluate your health condition and risk levels.</p>
+          <a href="/risk" class="btn btn-light shadow rounded-pill px-4">Check</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col">
+      <div class="card h-100 text-white border-0 shadow" style="background: linear-gradient(135deg,rgb(22, 105, 43),rgb(120, 218, 96));">
+        <div class="card-body text-center">
+          <h5 class="card-title">🏃 Activity Recognition</h5>
+          <p class="card-text">Classify your physical activity like walking or running.</p>
+          <a href="/activity" class="btn btn-light shadow rounded-pill px-4">Start</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col">
+      <div class="card h-100 text-white border-0 shadow" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+        <div class="card-body text-center">
+          <h5 class="card-title">🌡️ Body Temperature</h5>
+          <p class="card-text">Forecast your body temperature using health data.</p>
+          <a href="/temperature" class="btn btn-light shadow rounded-pill px-4">Predict</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}
